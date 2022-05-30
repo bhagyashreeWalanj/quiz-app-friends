@@ -1,46 +1,77 @@
-# Getting Started with Create React App
+# QUIZ APP - 'FRIENDS' Tv show Trivia App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This is an implemenation of the Quiz app based on Reactjs ans useContext feature.
 
-## Available Scripts
+## Project information
 
-In the project directory, you can run:
+- Developed using React,Typescript, react-hooks.
+- Tested using Jest and Enzyme.
+- React Version `^16.13.0`
+- Node version `v14.17.3` (LTS)
+- Running Application available on [Netlify](https://getir-todo-bhagyashree.netlify.app/)
 
-### `npm start`
+## Project structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- `src` Base app files.
+- `src/components` Reusable components,
+- `src/styles` folder for css files
+- `src/helper` folder for context and mock data files
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technical Documentation
 
-### `npm test`
+1. Users start a trivia by clicking a button 'Take a Quiz'
+2. Users can able to select multiple choice options from quiz.
+3. If answer is correct, it will change color to green else it will show red color.
+4. This quiz has 5 questions to answer.
+5. In the end of the quiz, there is success page to show quiz scores.
+6. If scores more than 1 point , then it will show friends dance gif.
+7. If scores less than 1 point, it will show joey's quote gif.
+8. If user wants to quit the quiz, Home button can lead to main page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Third Party Libraries
 
-### `npm run build`
+- [TypeScript](https://www.typescriptlang.org/) for static type checking.
+- [React / create-react-app](https://github.com/facebook/create-react-app)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [React Icons](https://react-icons.github.io/react-icons) for icons
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Quiz app's
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If I had a little more time to invest on this code assignment, I would probably
+focus on:
 
-### `npm run eject`
+- Implement Previous button to go back to previous question.
+- Responsive Page
+- Implementation of mock api and get questions/answers by axios.
+- Add Random/manual question feature.
+- On single select of answer button, other option buttons should be disabled.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Project commands
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Install dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```zsh
+npm i
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Running the project
 
-## Learn More
+```zsh
+# (make sure dependencies have been installed before.)
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Executing tests
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project contains an extensive suite of tests and makes use of [Jest](https://jestjs.io/) and [Enzyme](https://github.com/airbnb/enzyme).
+
+Run all tests by executing.
+
+```zsh
+# (make sure dependencies have been installed before.)
+npm test
+```
+
+```zsh
+npm run test -- -u
+```

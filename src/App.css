@@ -1,38 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body{
+  background-color: #8884e0;
+}
 .App {
   text-align: center;
+  font-family: arial;
+  /* height: 50rem; */
+  justify-content: center;
+  align-items: center;
+}
+.leftContainer{
+  float: left;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menuGrid-3{
+  display: inline-grid;
+  margin-left: 10rem;
+}
+.menuGrid-1{
+  display: inline-grid;
+  /* margin-left: 10rem; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.headertitle{
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 0.8rem;
+  font-size: 4rem;
+}
+.dot1{
+  color: tomato;
+}
+.dot2{
+  color: aqua;
+}
+.dot3{
+  color: goldenrod;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.Menu {
+  /* max-width: 1200px; */
+  /* width: 90rem; */
+  height: auto;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-direction: column;
+
+}
+
+
+.Menu input, .optionButton, .nextBtn {
+  width: 300px;
+  height: 50px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.nextBtn{
+  margin: 2rem;
+}
+
+
+.startQuizBtn{
+  width: 300px;
+    height: 50px;
+    margin: 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px; 
+     background-color: #f4c21e;
+    animation: bounce 1s infinite;
+
+}
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+
+.optionButton:hover, .nextBtn:hover,
+.startQuizBtn:hover {
+  background-color: coral;
+  cursor: pointer;
+}
+/* .optionButton:focus{ */
+.selectedOption{  
+  width: 300px;
+  height: 50px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #dd4742;
+}
+.correctAnswer{
+  width: 300px;
+  height: 50px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: rgba(84, 156, 25, 0.698);
+}
+.errorSpan{
+  color: #c52a0e;
+}
+
+.friends-logo{
+  width: 20rem;
+  /* height: 30rem; */
+}
+.QuizContainer{
+  background-color: #8884e0;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+
+}
+
+.Quiz {
+  width: 90rem;
+  height: 48rem;
+  border-radius: 10px;
+  /* background-color: #8884e0; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.options{
+  margin-right: 15rem;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.Menu, .Quiz, .EndScreen h1 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.EndScreen {
+  width: 100%;
+  height: 45rem;
+  border-radius: 10px;
+  /* background-color: #8884e0; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#nextQuestion {
+  width: 200px;
+}
+
+h3 {
+  color: #ffffff;
+
+}
+
+.checkmark{
+  color: yellowgreen;
+  height: 60px;
+  width: 60px;
+}
+
+.homeBtn{
+  width: 6rem;
+  height: 50px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px; 
+  cursor: pointer;
+  background-color: #f4c21e;
+  float: right;
 }
